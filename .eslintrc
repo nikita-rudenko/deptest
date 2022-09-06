@@ -1,0 +1,70 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["prettier", "import"],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/errors",
+    "plugin:import/typescript",
+    "plugin:import/warnings",
+    "plugin:react-hooks/recommended",
+    "prettier",
+    "plugin:@next/next/recommended"
+  ],
+  "env": {
+    "es6": true,
+    "browser": true,
+    "jest": true,
+    "node": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": "."
+    }
+  },
+  "rules": {
+    "prettier/prettier": "error", // Display Prettier formatting errors as ESLint errors
+    "react/prop-types": "off", // No need for prop-types since we use Typescript
+    "react/react-in-jsx-scope": "off", // React is automatically imported in recent versions
+    "react-hooks/exhaustive-deps": "warn", // Warn on missing hooks' dependencies
+    "react/display-name": "off", // Allow anonymous functions for declaring React components
+    "react/self-closing-comp": ["error"], // Self close tags with no children
+    "@typescript-eslint/no-unused-vars": "error", // Prevent leaving unused vars
+    "@typescript-eslint/no-var-requires": "off", // Allow imports with 'require'
+    "@typescript-eslint/member-delimiter-style": "off", // Prettier takes care about consistent delimiters in type declarations
+    "@typescript-eslint/no-explicit-any": "off", // Allow "any"
+    "@typescript-eslint/explicit-module-boundary-types": "error", // Require return types
+    "no-console": "error", // Console messages may expose confident information
+    "import/no-named-as-default-member": "off", // Allow using default imports even if there are named available
+    "import/prefer-default-export": "off", // Allow named exports
+    "import/default": "off", // This rule may work incorrectly for re-exported modules so disabled
+    "import/no-named-as-default": "off", // Exported types may have the same name as the arbitrary default import name so disabled
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          ["parent", "sibling", "index"]
+        ],
+        "newlines-between": "always",
+        "alphabetize": { "order": "asc", "caseInsensitive": true }
+      }
+    ]
+  }
+}
