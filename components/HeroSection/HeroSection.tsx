@@ -7,11 +7,14 @@ export const HeroSection = (): JSX.Element => {
   return (
     <Box
       css={{
-        overflowX: "hidden",
-        height: "415px",
-        position: "relative",
-        background:
+        "overflowX": "hidden",
+        "height": "415px",
+        "position": "relative",
+        "background":
           "linear-gradient(358.53deg, rgba(0, 0, 0, 0.5) 1.79%, rgba(0, 0, 0, 0.185) 99.33%)",
+        "@md": {
+          height: "628px",
+        },
       }}
     >
       <Image layout="fill" src="/hero.webp" objectFit="cover" />
