@@ -1,10 +1,14 @@
 import { styled } from "stitches.config"
 
 export const Typography = styled("p", {
-  fontFamily: "$primary",
-  fontWeight: 400,
+  "fontFamily": "$primary",
+  "fontWeight": 400,
 
-  variants: {
+  "> strong": {
+    fontWeight: "700",
+  },
+
+  "variants": {
     variant: {
       "md": {
         fontSize: "$md",
