@@ -1,5 +1,5 @@
 import { createStitches } from "@stitches/react"
-import type * as Stitches from '@stitches/react';
+import type * as Stitches from "@stitches/react"
 
 export const {
   config,
@@ -16,15 +16,16 @@ export const {
       black: "#121212",
       fWhite: "#ffffff",
       purple: "#5115f7",
+      lightGrey: "#a3a3a3",
     },
     fontSizes: {
-      "3xl": "12px",
-      "2xl": "13px",
-      "xl": "15px",
-      "lg": "17px",
-      "md": "19px",
-      "sm": "21px",
-      "xs": "21px",
+      "3xl": "200px",
+      "2xl": "70px",
+      "xl": "60px",
+      "lg": "48px",
+      "md": "34px",
+      "sm": "26px",
+      "xs": "18px",
       "2xs": "16px",
       "cta": "16px",
     },
@@ -32,6 +33,20 @@ export const {
       system: "system-ui",
       primary: "'Maison Neue', sans-serif",
       secondary: "'Teko', sans-serif",
+    },
+    zIndices: {
+      hide: -1,
+      auto: "auto",
+      base: 0,
+      docked: 10,
+      dropdown: 1000,
+      sticky: 1100,
+      banner: 1200,
+      overlay: 1300,
+      modal: 1400,
+      popover: 1500,
+      toast: 1600,
+      tooltip: 1700,
     },
   },
   media: {
@@ -43,4 +58,4 @@ export const {
   },
 })
 
-export type CSS = Stitches.CSS<typeof config>;
+export type CSS = Stitches.CSS<typeof config>
