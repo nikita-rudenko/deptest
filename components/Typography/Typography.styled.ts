@@ -22,6 +22,10 @@ export const Typography = styled("p", {
         fontSize: "$sm",
         lineHeight: "1em",
       },
+      "xs": {
+        fontSize: "$xs",
+        lineHeight: "1em",
+      },
       "2xs": {
         fontSize: "$2xs",
         lineHeight: "1.135em",
