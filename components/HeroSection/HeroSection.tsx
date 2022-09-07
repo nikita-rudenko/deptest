@@ -43,7 +43,9 @@ export const HeroSection = (): JSX.Element => {
           layout="fill"
           src="/hero.webp"
           objectFit="cover"
+          priority
           style={{ zIndex: "0" }}
+          alt="Hero image."
         />
       </Styled.ImageContainer>
 

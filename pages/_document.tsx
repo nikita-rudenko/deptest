@@ -11,10 +11,10 @@ function _Document(): JSX.Element {
           dangerouslySetInnerHTML={{ __html: getCssText() }}
         />
         <link
-          href="http://fonts.cdnfonts.com/css/maison-neue"
+          href="https://fonts.cdnfonts.com/css/maison-neue"
           rel="stylesheet"
         />
-        <link href="http://fonts.cdnfonts.com/css/teko" rel="stylesheet" />
+        <link href="https://fonts.cdnfonts.com/css/teko" rel="stylesheet" />
       </Head>
       <body>
         <Main />

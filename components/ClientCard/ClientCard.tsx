@@ -60,6 +60,7 @@ export function ClientCard({
             src={backgroundSrc}
             objectFit="cover"
             style={{ zIndex: "0" }}
+            alt={clientName}
           />
         </Styled.ImageContainer>
 
