@@ -1,50 +1,63 @@
+import { Variants } from "framer-motion"
 import Image from "next/image"
 
-import { Box } from "components/Box"
 import { Typography } from "components/Typography"
+
+import * as Styled from "./HeroSection.styled"
+
+const imageVariants: Variants = {
+  show: {
+    scale: 1.08,
+    transition: {
+      duration: 1,
+    },
+  },
+}
+
+const textContentVariants: Variants = {
+  initial: {
+    opacity: 0,
+    y: "100px",
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.2,
+      duration: 1,
+    },
+  },
+}
 
 export const HeroSection = (): JSX.Element => {
   return (
-    <Box
-      css={{
-        "overflowX": "hidden",
-        "height": "415px",
-        "position": "relative",
-        "background":
-          "linear-gradient(358.53deg, rgba(0, 0, 0, 0.5) 1.79%, rgba(0, 0, 0, 0.185) 99.33%)",
-        "@md": {
-          height: "628px",
-        },
-      }}
+    <Styled.Container
+      initial="initial"
+      whileInView="show"
+      viewport={{ once: true, amount: "some" }}
     >
-      <Image layout="fill" src="/hero.webp" objectFit="cover" />
+      <Styled.GradientOverlay />
 
-      <Box
-        css={{
-          "color": "$fWhite",
-          "position": "absolute",
-          "zIndex": "$docked",
-          "left": "16px",
-          "bottom": "22px",
-          "maxWidth": "400px",
+      <Styled.ImageContainer variants={imageVariants}>
+        <Image
+          layout="fill"
+          src="/hero.webp"
+          objectFit="cover"
+          style={{ zIndex: "0" }}
+        />
+      </Styled.ImageContainer>
 
-          "@md": {
-            left: "56px",
-            bottom: "84px",
-            maxWidth: "610px",
-          },
-        }}
-      >
+      <Styled.TextContent variants={textContentVariants}>
         <Typography as="h2" variant="2xs" css={{ marginBottom: "32px" }}>
           WORK
         </Typography>
 
-        <Typography as="h2" variant="md">
+        <Typography as="h2" variant="md" css={{ lineHeight: "1.2em" }}>
           A selection of projects that <strong>pioneer tech</strong> and{" "}
           <strong>marketing </strong>
           to help brands stay ahead.
         </Typography>
-      </Box>
-    </Box>
+      </Styled.TextContent>
+    </Styled.Container>
   )
 }
