@@ -1,5 +1,5 @@
 import { Box } from "components/Box"
-import ClientNoteSection from "components/ClientNoteSection/ClientNoteSection"
+import { ClientNoteSection } from "components/ClientNoteSection"
 import { ClientQuoteSection } from "components/ClientQuoteSection"
 import { ClientSection } from "components/ClientSection"
 import { CTA } from "components/CTA"

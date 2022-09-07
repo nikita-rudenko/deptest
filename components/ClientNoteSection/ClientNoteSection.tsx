@@ -10,10 +10,10 @@ type ClientNoteSectionProps = {
   cardPosition: "left" | "right"
 }
 
-const ClientNoteSection = ({
+export function ClientNoteSection({
   card,
   cardPosition,
-}: ClientNoteSectionProps): JSX.Element => {
+}: ClientNoteSectionProps): JSX.Element {
   return (
     <Styled.Container cardPosition={cardPosition}>
       {cardPosition === "left" && <ClientCard {...card} />}
@@ -28,4 +28,3 @@ const ClientNoteSection = ({
     </Styled.Container>
   )
 }
-export default ClientNoteSection
