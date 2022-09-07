@@ -22,7 +22,7 @@ export function FormSection(): JSX.Element {
 
   return (
     <Styled.Container>
-      <Box css={{ maxWidth: "380px" }}>
+      <Box css={{ maxWidth: "380px", marginRight: "48px" }}>
         <Typography
           variant={{ "@initial": "sm", "@lg": "lg" }}
           css={{ lineHeight: "1.4em" }}

@@ -24,8 +24,9 @@ function Home(): JSX.Element {
         <ClientSection left={clients[0]} right={clients[1]} />
         <ClientSection left={clients[2]} right={clients[3]} />
         <ClientNoteSection card={clients[4]} cardPosition="left" />
-        <ClientSection left={clients[4]} right={clients[5]} />
+        <ClientSection left={clients[10]} right={clients[5]} />
         <ClientSection left={clients[6]} right={clients[7]} />
+        <ClientNoteSection card={clients[11]} cardPosition="right" />
         <ClientSection left={clients[8]} right={clients[9]} />
         <ClientQuoteSection />
         <ClientListSection />
