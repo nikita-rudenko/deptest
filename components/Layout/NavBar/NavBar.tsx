@@ -6,9 +6,12 @@ import { IconButton } from "components/IconButton"
 import { MenuIcon } from "components/SVG"
 import { links } from "data/links"
 
+import { useLayoutContext } from "../Layout.context"
 import * as Styled from "./NavBar.styled"
 
 export function NavBar(): JSX.Element {
+  const { openMenu } = useLayoutContext()
+
   return (
     <Styled.Container>
       <Box>
@@ -28,7 +31,10 @@ export function NavBar(): JSX.Element {
           })}
         </Styled.LinksList>
 
-        <IconButton css={{ marginLeft: "96px", color: "$fWhite" }}>
+        <IconButton
+          onClick={openMenu}
+          css={{ marginLeft: "96px", color: "$fWhite" }}
+        >
           <MenuIcon />
         </IconButton>
       </Styled.Nav>

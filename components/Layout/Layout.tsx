@@ -1,4 +1,6 @@
+import { LayoutContextProvider } from "./Layout.context"
 import * as Styled from "./Layout.styled"
+import { NavBar } from "./NavBar"
 import { NavBarMobile } from "./NavBarMobile"
 
 type LayoutProps = {
@@ -7,10 +9,13 @@ type LayoutProps = {
 
 export function Layout({ children }: LayoutProps): JSX.Element {
   return (
-    <Styled.LayoutContainer>
-      <NavBarMobile />
+    <LayoutContextProvider>
+      <Styled.LayoutContainer>
+        <NavBar />
+        <NavBarMobile />
 
-      {children}
-    </Styled.LayoutContainer>
+        {children}
+      </Styled.LayoutContainer>
+    </LayoutContextProvider>
   )
 }
