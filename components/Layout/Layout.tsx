@@ -1,3 +1,4 @@
+import { Footer } from "./Footer"
 import { LayoutContextProvider } from "./Layout.context"
 import * as Styled from "./Layout.styled"
 import { NavBar, NavBarMobile } from "./NavBar"
@@ -14,6 +15,8 @@ export function Layout({ children }: LayoutProps): JSX.Element {
         <NavBarMobile />
 
         {children}
+
+        <Footer />
       </Styled.LayoutContainer>
     </LayoutContextProvider>
   )
