@@ -1,4 +1,5 @@
 import { Box } from "components/Box"
+import { ClientListSection } from "components/ClientListSection"
 import { ClientNoteSection } from "components/ClientNoteSection"
 import { ClientQuoteSection } from "components/ClientQuoteSection"
 import { ClientSection } from "components/ClientSection"
@@ -18,6 +19,7 @@ function Home(): JSX.Element {
       <ClientSection left={clients[6]} right={clients[7]} />
       <ClientSection left={clients[8]} right={clients[9]} />
       <ClientQuoteSection />
+      <ClientListSection />
     </Box>
   )
 }
