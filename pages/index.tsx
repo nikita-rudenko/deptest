@@ -1,3 +1,5 @@
+import Head from "next/head"
+
 import { Box } from "components/Box"
 import { ClientListSection } from "components/ClientListSection"
 import { ClientNoteSection } from "components/ClientNoteSection"
@@ -10,19 +12,26 @@ import { clients } from "data/clients"
 
 function Home(): JSX.Element {
   return (
-    <Box>
-      <HeroSection />
-      <CTA />
-      <ClientSection left={clients[0]} right={clients[1]} />
-      <ClientSection left={clients[2]} right={clients[3]} />
-      <ClientNoteSection card={clients[4]} cardPosition="left" />
-      <ClientSection left={clients[4]} right={clients[5]} />
-      <ClientSection left={clients[6]} right={clients[7]} />
-      <ClientSection left={clients[8]} right={clients[9]} />
-      <ClientQuoteSection />
-      <ClientListSection />
-      <FormSection />
-    </Box>
+    <>
+      <Head>
+        <title>DEPTest®</title>
+        <meta name="description" content="A test task" />
+      </Head>
+
+      <Box>
+        <HeroSection />
+        <CTA />
+        <ClientSection left={clients[0]} right={clients[1]} />
+        <ClientSection left={clients[2]} right={clients[3]} />
+        <ClientNoteSection card={clients[4]} cardPosition="left" />
+        <ClientSection left={clients[4]} right={clients[5]} />
+        <ClientSection left={clients[6]} right={clients[7]} />
+        <ClientSection left={clients[8]} right={clients[9]} />
+        <ClientQuoteSection />
+        <ClientListSection />
+        <FormSection />
+      </Box>
+    </>
   )
 }
 
