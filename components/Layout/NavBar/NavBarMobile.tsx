@@ -1,10 +1,9 @@
-import Image from "next/image"
-
 import { IconButton } from "components/IconButton"
+import { Logo } from "components/SVG"
 import { Typography } from "components/Typography"
 
 import { useLayoutContext } from "../Layout.context"
-import { MobileMenu } from "../MobileMenu"
+import { MenuMobile } from "../Menu"
 import { NavBarContainer } from "./NavBarMobile.styled"
 
 export const NavBarMobile = (): JSX.Element => {
@@ -12,7 +11,7 @@ export const NavBarMobile = (): JSX.Element => {
 
   return (
     <NavBarContainer>
-      <Image src="/logo-black.svg" width="52px" height="15px" />
+      <Logo variant="small" />
 
       <IconButton onClick={openMenu}>
         <Typography as="h1" variant="2xs">
@@ -20,7 +19,7 @@ export const NavBarMobile = (): JSX.Element => {
         </Typography>
       </IconButton>
 
-      {isMenuOpen && <MobileMenu onClose={closeMenu} />}
+      {isMenuOpen && <MenuMobile onClose={closeMenu} />}
     </NavBarContainer>
   )
 }

@@ -1,7 +1,6 @@
 import { LayoutContextProvider } from "./Layout.context"
 import * as Styled from "./Layout.styled"
-import { NavBar } from "./NavBar"
-import { NavBarMobile } from "./NavBarMobile"
+import { NavBar, NavBarMobile } from "./NavBar"
 
 type LayoutProps = {
   children: React.ReactNode
