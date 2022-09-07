@@ -68,16 +68,18 @@ export function ClientCard({
             {clientName}
           </Typography>
 
-          <Typography
-            as="h3"
-            withAnimatedUnderline
-            variant={{
-              "@initial": "sm",
-              "@lg": "lg",
-            }}
-          >
-            {title}
-          </Typography>
+          <Box>
+            <Typography
+              as="h3"
+              withAnimatedUnderline
+              variant={{
+                "@initial": "sm",
+                "@lg": "lg",
+              }}
+            >
+              {title}
+            </Typography>
+          </Box>
 
           <Typography
             as="div"
