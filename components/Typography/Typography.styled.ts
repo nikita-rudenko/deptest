@@ -10,8 +10,16 @@ export const Typography = styled("p", {
 
   "variants": {
     variant: {
+      "lg": {
+        fontSize: "$lg",
+        lineHeight: "1em",
+      },
       "md": {
         fontSize: "$md",
+        lineHeight: "1em",
+      },
+      "sm": {
+        fontSize: "$sm",
         lineHeight: "1em",
       },
       "2xs": {
