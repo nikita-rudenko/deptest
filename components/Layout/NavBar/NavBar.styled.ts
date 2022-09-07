@@ -1,3 +1,5 @@
+import { motion } from "framer-motion"
+
 import { styled } from "stitches.config"
 
 export const Container = styled("header", {
@@ -13,12 +15,12 @@ export const Container = styled("header", {
   },
 })
 
-export const Nav = styled("nav", {
+export const Nav = styled(motion.nav, {
   display: "flex",
   alignItems: "center",
 })
 
-export const LinksList = styled("div", {
+export const LinksList = styled(motion.div, {
   "display": "flex",
 
   "> *:not(:last-child)": {
@@ -26,7 +28,7 @@ export const LinksList = styled("div", {
   },
 })
 
-export const LinkItem = styled("div", {
+export const LinkItem = styled(motion.div, {
   "textTransform": "uppercase",
 
   "> a": {

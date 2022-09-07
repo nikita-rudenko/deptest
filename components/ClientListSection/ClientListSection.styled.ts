@@ -1,3 +1,5 @@
+import { motion } from "framer-motion"
+
 import { Box } from "components/Box"
 import { styled } from "stitches.config"
 
@@ -10,7 +12,7 @@ export const Container = styled(Box, {
   },
 })
 
-export const BrandsGrid = styled(Box, {
+export const BrandsGrid = styled(motion.div, {
   "display": "grid",
   "gridTemplateColumns": "repeat(2, 1fr)",
   "rowGap": "84px",
@@ -23,7 +25,7 @@ export const BrandsGrid = styled(Box, {
   },
 })
 
-export const LogoContainer = styled(Box, {
+export const LogoContainer = styled(motion.div, {
   "position": "relative",
   "width": "115px",
   "height": "50px",

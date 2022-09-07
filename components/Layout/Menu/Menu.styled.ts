@@ -1,6 +1,8 @@
+import { motion } from "framer-motion"
+
 import { styled } from "stitches.config"
 
-export const Overlay = styled("div", {
+export const Overlay = styled(motion.div, {
   background: "$black",
   width: "100%",
   height: "100%",
@@ -19,7 +21,7 @@ export const Header = styled("div", {
   alignItems: "center",
 })
 
-export const LinksList = styled("nav", {
+export const LinksList = styled(motion.nav, {
   "display": "flex",
   "color": "$fWhite",
   "textAlign": "right",
@@ -31,10 +33,6 @@ export const LinksList = styled("nav", {
     "&::after": {
       content: "",
       margin: "10px 0",
-      display: "block",
-      width: "100%",
-      height: "1px",
-      backgroundColor: "$lightGrey",
     },
   },
 })

@@ -1,3 +1,5 @@
+import { motion } from "framer-motion"
+import type { Variants } from "framer-motion"
 import Link from "next/link"
 
 import { IconButton } from "components/IconButton"
@@ -9,6 +11,21 @@ import { useLayoutContext } from "../Layout.context"
 import { Menu } from "../Menu"
 import * as Styled from "./NavBar.styled"
 
+const linksVariants: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+}
+
+const linkVariants: Variants = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1 },
+}
+
 export function NavBar(): JSX.Element {
   const { isMenuOpen, openMenu, closeMenu } = useLayoutContext()
 
@@ -17,10 +34,14 @@ export function NavBar(): JSX.Element {
       <Logo variant="big" />
 
       <Styled.Nav>
-        <Styled.LinksList>
+        <Styled.LinksList
+          variants={linksVariants}
+          initial="hidden"
+          animate="show"
+        >
           {links.slice(0, 6).map(({ label, href }) => {
             return (
-              <Styled.LinkItem key={label}>
+              <Styled.LinkItem variants={linkVariants} key={label}>
                 <Link href={href} passHref>
                   <Typography as="a" withAnimatedUnderline>
                     {label}
@@ -32,6 +53,7 @@ export function NavBar(): JSX.Element {
         </Styled.LinksList>
 
         <IconButton
+          as={motion.div}
           onClick={openMenu}
           css={{ marginLeft: "96px", color: "$fWhite" }}
         >
