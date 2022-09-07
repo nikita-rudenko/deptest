@@ -9,6 +9,20 @@ export const Typography = styled("p", {
   },
 
   "variants": {
+    withAnimatedUnderline: {
+      true: {
+        "display": "inline",
+        "width": "calc(100%)",
+        "backgroundImage":
+          "linear-gradient(transparent calc(100% - 3px), currentColor 3px)",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "0% 100%",
+        "transition": "background-size 1s",
+        "&:hover, &:focus": {
+          backgroundSize: "100% 100%",
+        },
+      },
+    },
     variant: {
       "xl": {
         fontSize: "$xl",

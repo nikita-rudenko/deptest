@@ -1,15 +1,26 @@
+import { motion } from "framer-motion"
+
 import { Box } from "components/Box"
 import { styled } from "stitches.config"
 
-export const Container = styled(Box, {
-  "overflowX": "hidden",
+export const Container = styled(motion.a, {
+  "display": "block",
+  "overflow": "hidden",
   "height": "484px",
   "position": "relative",
   "width": "100%",
+  "cursor": "pointer",
 
   "@md": {
     height: "568px",
   },
+})
+
+export const ImageContainer = styled(motion.div, {
+  overflow: "hidden",
+  height: "100%",
+  position: "relative",
+  width: "100%",
 })
 
 export const GradientOverlay = styled(Box, {
@@ -17,6 +28,7 @@ export const GradientOverlay = styled(Box, {
   height: "100%",
   zIndex: "$docked",
   position: "absolute",
+  overflow: "hidden",
   background:
     "linear-gradient(0deg, rgba(0, 0, 0, 0.33) 0%, rgba(0, 0, 0, 0) 100%)",
 })

@@ -2,6 +2,7 @@ import Link from "next/link"
 
 import { IconButton } from "components/IconButton"
 import { Logo, MenuIcon } from "components/SVG"
+import { Typography } from "components/Typography"
 import { links } from "data/links"
 
 import { useLayoutContext } from "../Layout.context"
@@ -21,7 +22,9 @@ export function NavBar(): JSX.Element {
             return (
               <Styled.LinkItem key={label}>
                 <Link href={href} passHref>
-                  {label}
+                  <Typography as="a" withAnimatedUnderline>
+                    {label}
+                  </Typography>
                 </Link>
               </Styled.LinkItem>
             )
