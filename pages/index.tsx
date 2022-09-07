@@ -4,6 +4,7 @@ import { ClientNoteSection } from "components/ClientNoteSection"
 import { ClientQuoteSection } from "components/ClientQuoteSection"
 import { ClientSection } from "components/ClientSection"
 import { CTA } from "components/CTA"
+import { FormSection } from "components/FormSection"
 import { HeroSection } from "components/HeroSection"
 import { clients } from "data/clients"
 
@@ -20,6 +21,7 @@ function Home(): JSX.Element {
       <ClientSection left={clients[8]} right={clients[9]} />
       <ClientQuoteSection />
       <ClientListSection />
+      <FormSection />
     </Box>
   )
 }
