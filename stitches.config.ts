@@ -32,7 +32,6 @@ export const {
     fonts: {
       system: "system-ui",
       primary: "'Maison Neue', sans-serif",
-      secondary: "'Teko', sans-serif",
     },
     zIndices: {
       hide: -1,

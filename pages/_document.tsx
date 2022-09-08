@@ -14,7 +14,6 @@ function _Document(): JSX.Element {
           href="https://fonts.cdnfonts.com/css/maison-neue"
           rel="stylesheet"
         />
-        <link href="https://fonts.cdnfonts.com/css/teko" rel="stylesheet" />
       </Head>
       <body>
         <Main />
