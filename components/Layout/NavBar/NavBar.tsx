@@ -38,13 +38,13 @@ export function NavBar(): JSX.Element {
         </Styled.LinksList>
 
         <IconButton
-          as={motion.div}
+          as={motion.button}
           variants={menuVariants}
           initial="hidden"
           animate="show"
           whileHover="hover"
           onClick={openMenu}
-          css={{ marginLeft: "96px", color: "$fWhite" }}
+          css={{ marginLeft: "96px", color: "$fWhite", padding: "10px" }}
         >
           <MenuIcon />
         </IconButton>
