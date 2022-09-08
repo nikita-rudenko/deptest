@@ -14,7 +14,7 @@ export const Typography = styled("p", {
         "display": "inline",
         "width": "calc(100%)",
         "backgroundImage":
-          "linear-gradient(transparent calc(100% - 3px), currentColor 3px)",
+          "linear-gradient(transparent calc(100% - 1px), currentColor 1px)",
         "backgroundRepeat": "no-repeat",
         "backgroundSize": "0% 100%",
         "transition": "background-size 0.5s",
