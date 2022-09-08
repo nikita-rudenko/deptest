@@ -1,25 +1,10 @@
-import type { Variants } from "framer-motion"
 import Image from "next/image"
 
 import { Typography } from "components/Typography"
 
+import { brandsVariants, brandVariants } from "./ClientListSection.animated"
 import { brands } from "./ClientListSection.data"
 import * as Styled from "./ClientListSection.styled"
-
-const brandsVariants: Variants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-}
-
-const brandVariants: Variants = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1 },
-}
 
 export function ClientListSection(): JSX.Element {
   return (

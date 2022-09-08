@@ -1,33 +1,9 @@
-import { Variants } from "framer-motion"
 import Image from "next/image"
 
 import { Typography } from "components/Typography"
 
+import { imageVariants, textContentVariants } from "./HeroSection.animated"
 import * as Styled from "./HeroSection.styled"
-
-const imageVariants: Variants = {
-  show: {
-    scale: 1.08,
-    transition: {
-      duration: 1,
-    },
-  },
-}
-
-const textContentVariants: Variants = {
-  initial: {
-    opacity: 0,
-    y: "100px",
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.2,
-      duration: 1,
-    },
-  },
-}
 
 export const HeroSection = (): JSX.Element => {
   return (

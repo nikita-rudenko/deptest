@@ -1,4 +1,3 @@
-import type { Variants } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -7,34 +6,10 @@ import { PointIcon } from "components/SVG"
 import { Typography } from "components/Typography"
 import type { ClientCase } from "data/clients"
 
+import { cardVariants, imageVariants } from "./ClientCard.animated"
 import * as Styled from "./ClientCard.styled"
 
 type ClientCardProps = ClientCase
-
-const cardVariants: Variants = {
-  offscreen: {
-    y: 100,
-    opacity: 0,
-  },
-  onscreen: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      delay: 0.2,
-      duration: 0.8,
-    },
-  },
-}
-
-const imageVariants: Variants = {
-  hover: {
-    scale: 1.08,
-    transition: {
-      delay: 0.1,
-      duration: 1,
-    },
-  },
-}
 
 export function ClientCard({
   title,

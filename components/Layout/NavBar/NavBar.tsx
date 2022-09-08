@@ -1,5 +1,4 @@
 import { motion } from "framer-motion"
-import type { Variants } from "framer-motion"
 import Link from "next/link"
 
 import { IconButton } from "components/IconButton"
@@ -9,35 +8,8 @@ import { links } from "data/links"
 
 import { useLayoutContext } from "../Layout.context"
 import { Menu } from "../Menu"
+import { linksVariants, linkVariants, menuVariants } from "./NavBar.animated"
 import * as Styled from "./NavBar.styled"
-
-const linksVariants: Variants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-}
-
-const linkVariants: Variants = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1 },
-}
-
-const menuVariants: Variants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      delay: 1.2,
-    },
-  },
-  hover: {
-    scale: 1.2,
-  },
-}
 
 export function NavBar(): JSX.Element {
   const { isMenuOpen, openMenu, closeMenu } = useLayoutContext()
