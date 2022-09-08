@@ -1,4 +1,4 @@
-import { styled } from "@stitches/react"
+import { styled } from "stitches.config"
 
 export const Button = styled("button", {
   border: "1px solid $black",
@@ -9,4 +9,16 @@ export const Button = styled("button", {
   fontSize: "$xs",
   width: "100%",
   cursor: "pointer",
+
+  variants: {
+    variant: {
+      primary: {
+        "&:hover": {
+          background: "$black",
+          color: "$fWhite",
+          transition: "all 0.3s linear",
+        },
+      },
+    },
+  },
 })

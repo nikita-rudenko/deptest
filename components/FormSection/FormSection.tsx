@@ -56,7 +56,11 @@ export function FormSection(): JSX.Element {
 
         <Box />
 
-        <Button type="submit" css={{ width: "100%", maxWidth: "175px" }}>
+        <Button
+          type="submit"
+          variant="primary"
+          css={{ width: "100%", maxWidth: "175px" }}
+        >
           Send
         </Button>
       </Styled.ContactForm>
