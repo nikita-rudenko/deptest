@@ -1,5 +1,4 @@
 import { motion } from "framer-motion"
-import type { Variants } from "framer-motion"
 import Link from "next/link"
 
 import { Box } from "components/Box"
@@ -8,37 +7,11 @@ import { Logo, XIcon } from "components/SVG"
 import { Typography } from "components/Typography"
 import { links } from "data/links"
 
+import { linksVariants, linkVariants, overlayVariants } from "./Menu.animated"
 import * as Styled from "./Menu.styled"
 
 type MenuMobileProps = {
   onClose: VoidFunction
-}
-
-const overlayVariants: Variants = {
-  off: {
-    opacity: 0,
-  },
-  on: {
-    opacity: 1,
-    transition: {
-      duration: 0.3,
-    },
-  },
-}
-
-const linksVariants: Variants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-}
-
-const linkVariants: Variants = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1 },
 }
 
 export const Menu = ({ onClose }: MenuMobileProps): JSX.Element => {
