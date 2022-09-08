@@ -26,6 +26,19 @@ const linkVariants: Variants = {
   show: { opacity: 1 },
 }
 
+const menuVariants: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      delay: 1.2,
+    },
+  },
+  hover: {
+    scale: 1.2,
+  },
+}
+
 export function NavBar(): JSX.Element {
   const { isMenuOpen, openMenu, closeMenu } = useLayoutContext()
 
@@ -54,6 +67,10 @@ export function NavBar(): JSX.Element {
 
         <IconButton
           as={motion.div}
+          variants={menuVariants}
+          initial="hidden"
+          animate="show"
+          whileHover="hover"
           onClick={openMenu}
           css={{ marginLeft: "96px", color: "$fWhite" }}
         >
