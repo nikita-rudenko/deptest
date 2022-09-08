@@ -17,7 +17,7 @@ export const Typography = styled("p", {
           "linear-gradient(transparent calc(100% - 3px), currentColor 3px)",
         "backgroundRepeat": "no-repeat",
         "backgroundSize": "0% 100%",
-        "transition": "background-size 1s",
+        "transition": "background-size 0.5s",
         "&:hover, &:focus": {
           backgroundSize: "100% 100%",
         },
